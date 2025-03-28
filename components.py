@@ -21,7 +21,7 @@ def load_job_data_from_xml(xml_file_path):
 def render_header():
     st.markdown(
         '<div style="margin-top: 50px; text-align: center;">'
-        f'<h2 style="color: {TEXT_COLOR};">Enter your skills below</h2>'
+        f'<h2 style="color: {PRIMARY_COLOR};">Enter your skills below</h2>'
         '</div>',
         unsafe_allow_html=True
     )
@@ -32,8 +32,18 @@ def render_sidebar():
         st.markdown('<div class="app-header">skillMatch</div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown(f'<div style="color: {PRIMARY_COLOR}; font-weight: bold;">Dashboard</div>', unsafe_allow_html=True)
-        st.markdown(f'<div style="color: {TEXT_COLOR};">Jobs</div>', unsafe_allow_html=True)
-        st.markdown(f'<div style="color: {TEXT_COLOR};">Skills</div>', unsafe_allow_html=True)
+        
+        
+        
+        st.markdown("---")
+        st.markdown(f"""
+        <div style="text-align: center; color: {PRIMARY_COLOR} !important;">
+            <h1>Developed By</h1><br>
+            <strong>Kunal Chauhan</strong><br>
+            <strong>Yash Dave</strong><br>
+            <strong>Zishan Vhora</strong>
+        </div>
+        """, unsafe_allow_html=True)
 
 def render_skills_input(unique_skills):
     user_skills = st.multiselect("Enter your skills (Choose between 3 and 8 skills)", unique_skills)
